@@ -14,6 +14,7 @@
 
 body{
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--text-color);
 }
 
@@ -29,6 +30,11 @@ header{
   background-color: var(--bg-color);
   padding: 28px 12%;
   transition: all .50s ease;
+}
+
+a, button{
+  max-width: 44px;
+  min-height: 44px;
 }
 
 .logo{
@@ -48,6 +54,8 @@ header{
   padding: 5px 0;
   margin: 0px 30px;
   transition: all .50s ease;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .navbar a:hover{
@@ -73,11 +81,14 @@ header{
 }
 
 .hero{
-  height: 50vh;
+  width: 100vw;
+  height: 70vh;
   margin-top: 6.5%;
-  background-image: url(../public/images/heros/hero-image_2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
+}
+
+.hero img{
+  width: 100%;
 }
 
 .container{
@@ -94,11 +105,18 @@ header{
   margin: 40px 50px;
   border-radius: 10px;
   border: 2px solid rgb(228, 228, 228);
+  overflow: hidden;
 }
 
-.card-image{
-  background-color: aqua;
+.card .card-img{
+  width: 270px;
   height: 170px;
+  overflow: hidden;
+}
+
+.card .card-img img{
+  width: 270px;
+  background-color: aqua;
   margin-bottom: 15px;
   background-size: cover;
   border-radius: 10px 10px 0 0;
@@ -108,6 +126,42 @@ header{
 .card h2, .card p{
   margin: 10px;
   line-height: 1.5rem;
+}
+
+.card .card-img .city{
+  position: absolute;
+  background-color: #fff;
+  margin-top: 14px;
+  width: 120px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 0 10px 10px 0;
+}
+
+.card .card-img .city:hover{
+  transition: all .50s ease;
+  width: 170px;
+}
+
+.card .card-img .rating{
+  position: absolute;
+  display: flex;
+  z-index: 99;
+  margin-top: -70px;
+  margin-left: 225px;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+.card .card-body{
+  overflow-y: scroll;
+  width: 100%;
+  height: 495px;
+  scrollbar-width: none;
+}
+
+.card .card-body::-webkit-scrollbar {
+  display: none;
 }
 
 footer{
@@ -128,9 +182,6 @@ footer{
     padding: 5px 0;
     margin: 0px 20px;
   }
-  .hero img{
-    width: 1000px;
-  }
 }
 
 @media (max-width: 1090px){
@@ -142,7 +193,7 @@ footer{
     top: 100%;
     right: -100%;
     width: 270px;
-    height: 25vh;
+    height: 30vh;
     background: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -170,6 +221,11 @@ footer{
   }
 
   .hero{
-    height: 100vh;
+    height: 50vh;
+  }
+  
+  .hero img{
+    height: 100%;
+    /* width: 100%; */
   }
 }
