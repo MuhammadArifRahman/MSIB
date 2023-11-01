@@ -1,0 +1,125 @@
+.maincontent{
+  text-align: center;
+  width: 100vw;
+}
+
+.image-resto{
+  text-align: center;
+  margin-top: 15vh;
+  color: black;
+  font-size: 1.3em;
+}
+
+.image-resto img{
+  height: 70vh;
+  margin-top: 30px;
+}
+
+.image-resto button{
+  padding: 10px 10px;
+  font-size: .8em;
+  font-weight: 600;
+  border-radius: 5px;
+  color: #ffff;
+  border: none;
+  max-width: 44px;
+  max-height: 44px;
+}
+
+.image-resto .tambah{
+  background-color: #0d6dfdcb;
+}
+
+.image-resto .hapus{
+  background-color: #dc3545;
+}
+
+.image-resto button:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
+.contain{
+  width: 60vw;
+  margin-top: 5vh;
+  color: black;
+  margin: auto;
+}
+
+.contain .addres {
+  display: flex;
+  margin-top: 50px;
+}
+
+.contain .addres > *{
+  flex: 1 1;
+}
+
+.contain .addres .street{
+  margin-left: 30%;
+}
+
+.contain table tr td, .contain table tr th{
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.contain .description{
+  margin: 5vh auto 0;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.contain .description h2{
+  text-align: center;
+  padding: 3vh 0 5vh;
+}
+
+.contain .menu{
+  margin: 5vh 0;
+}
+
+.contain ul{
+  margin: 2vh 2vw;
+  line-height: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contain ul li {
+  flex: 50%;
+}
+
+.contain .review{
+  margin: 5vh 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contain .review .card-review .date{
+  font-size: .8em;
+  right: 0;
+  text-align: right;
+}
+
+.contain .review .card-review{
+  width: 260px;
+  background-color: antiquewhite;
+  padding: 10px 20px;
+  margin: 20px;
+  flex: 50%;
+  border-radius: 10px;
+  line-height: 1.7em;
+} 
+
+@media (max-width: 1090px){
+  .image-resto img{
+    width: 70vw;
+    height: auto;
+  }
+
+  .contain{
+    width: 80vw;
+  }
+
+}
