@@ -36,9 +36,12 @@ describe('Liking A Movie', () => {
       },
     });
 
-    document.querySelector('#likeButton').dispatchEvent(new Event('click'));
+    document.querySelector('.hapus').dispatchEvent(new Event('click'));
 
+    // Memastikan film berhasil disukai
     const movie = await FavoriteRestoIdb.getResto(1);
     expect(movie).toEqual({ id: 1 });
+
+    await FavoriteRestoIdb.deleteResto(1);
   });
 });
